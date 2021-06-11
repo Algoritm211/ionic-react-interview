@@ -1,0 +1,7 @@
+{
+  "name": "psychologists-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
