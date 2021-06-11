@@ -13,6 +13,7 @@ import React from 'react';
 import {useFormik} from "formik";
 import * as Yup from 'yup';
 import './RegisterTab.css'
+import SpecDB from '../../firebase/specialists/specDB'
 
 const registerValidationSchema = Yup.object({
   email: Yup.string()
@@ -34,8 +35,10 @@ const RegisterTab: React.FC = () => {
       type: '',
     },
     validationSchema: registerValidationSchema,
-    onSubmit: (values) => {
+    onSubmit: async (values) => {
       alert(JSON.stringify(values, null, 2));
+      const data = await SpecDB.getAll()
+      console.log(data)
     }
   })
 

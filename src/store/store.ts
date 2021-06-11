@@ -1,8 +1,9 @@
 import {combineReducers, configureStore} from '@reduxjs/toolkit'
 import { useDispatch } from 'react-redux'
+import specSlice from './specialists/reducer'
 
 const rootReducer = combineReducers({
-
+  specReducer: specSlice
 })
 
 

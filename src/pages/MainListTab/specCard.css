@@ -1,0 +1,10 @@
+.card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contact {
+  font-style: italic;
+  margin-top: 10px;
+}
