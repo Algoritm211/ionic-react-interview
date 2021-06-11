@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import {IonContent, IonHeader, IonPage, IonTitle, IonToolbar} from "@ionic/react";
-import SpecCard from "./specCard";
+import SpecCard from "../../components/specCard/specCard";
 import {useDispatch, useSelector} from "react-redux";
 import {getAllSpecs} from "../../store/specialists/selectors";
 import {loadAllSpecs} from "../../store/specialists/thunks";
@@ -13,21 +13,19 @@ const MainListTab: React.FC = () => {
     dispatch(loadAllSpecs())
   }, [])
 
-  // I know that index like key is bad, but no user ids in psychologists.json
-  // in exercise file, usually it`s generated in db
-  const specsBlock = specs.map((specialist, index) => {
-    return <SpecCard specialist={specialist} key={index}/>
+  const specsBlock = specs.map((specialist) => {
+    return <SpecCard specialist={specialist} key={specialist.id}/>
   })
 
   return (
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>App specialists</IonTitle>
+          <IonTitle>Все специалисты</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
-        <IonTitle size="large">Main List</IonTitle>
+        <IonTitle size="large">Результаты:</IonTitle>
         {specsBlock}
       </IonContent>
     </IonPage>

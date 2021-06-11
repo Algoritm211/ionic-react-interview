@@ -28,6 +28,18 @@ const specSlice = createSlice({
     },
     toggleIsLoading: (state, action) => {
       state.isLoading = action.payload
+    },
+    specUpdate: (state, action) => {
+      // callback for updating specialist
+      const updateCallback = (spec: SpecType) => {
+        if (spec.id === action.payload.id) {
+          return action.payload
+        }
+        return spec
+      }
+      state.allSpecs = state.allSpecs.map((spec) => updateCallback(spec))
+      state.favouriteSpecs = state.favouriteSpecs.map((spec) => updateCallback(spec))
+      state.disFavouriteSpecs = state.disFavouriteSpecs.map((spec) => updateCallback(spec))
     }
   }
 })
@@ -36,7 +48,8 @@ export const {
   toggleIsLoading,
   setAllSpecs,
   setDisFavouriteSpecs,
-  setFavouriteSpecs
+  setFavouriteSpecs,
+  specUpdate
 } = specSlice.actions
 
 export default specSlice.reducer

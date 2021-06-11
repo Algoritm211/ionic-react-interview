@@ -7,7 +7,8 @@ import {
   IonLabel,
   IonPage, IonSelect, IonSelectOption,
   IonTitle,
-  IonToolbar
+  IonToolbar,
+  useIonAlert
 } from '@ionic/react';
 import React from 'react';
 import {useFormik} from "formik";
@@ -27,7 +28,7 @@ const registerValidationSchema = Yup.object({
 })
 
 const RegisterTab: React.FC = () => {
-
+  const [created] = useIonAlert();
   const formik = useFormik({
     initialValues: {
       email: '',
@@ -36,17 +37,32 @@ const RegisterTab: React.FC = () => {
     },
     validationSchema: registerValidationSchema,
     onSubmit: async (values) => {
-      alert(JSON.stringify(values, null, 2));
-      const data = await SpecDB.getAll()
-      console.log(data)
+      try {
+        await SpecDB.create({...values})
+        created(configAlert('Поздравляем', 'Вы зарегистрированы на платформе!'))
+        formik.resetForm()
+      } catch (error) {
+        created(configAlert('Ошибка', 'Попробуйте еще раз'))
+      }
     }
   })
+
+  function configAlert(alertHeader: string, alertMessage: string) {
+    return {
+      cssClass: 'my-css',
+      header: alertHeader,
+      message: alertMessage,
+      buttons: [
+        { text: 'Ok' },
+      ],
+    }
+  }
 
   return (
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Registration</IonTitle>
+          <IonTitle>Регистрация</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
