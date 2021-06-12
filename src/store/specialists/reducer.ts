@@ -1,5 +1,5 @@
-import {createSlice} from "@reduxjs/toolkit";
-import {SpecType} from "../../types/specialists";
+import { createSlice } from '@reduxjs/toolkit'
+import { SpecType } from '../../types/specialists'
 
 type SpecSliceType = {
   isLoading: Boolean,
@@ -9,7 +9,7 @@ type SpecSliceType = {
 }
 
 const specSlice = createSlice({
-  name: "specSlice",
+  name: 'specSlice',
   initialState: {
     isLoading: false,
     allSpecs: [],
@@ -40,8 +40,8 @@ const specSlice = createSlice({
       state.allSpecs = state.allSpecs.map((spec) => updateCallback(spec))
       state.favouriteSpecs = state.favouriteSpecs.map((spec) => updateCallback(spec))
       state.disFavouriteSpecs = state.disFavouriteSpecs.map((spec) => updateCallback(spec))
-    }
-  }
+    },
+  },
 })
 
 export const {
@@ -49,7 +49,7 @@ export const {
   setAllSpecs,
   setDisFavouriteSpecs,
   setFavouriteSpecs,
-  specUpdate
+  specUpdate,
 } = specSlice.actions
 
 export default specSlice.reducer

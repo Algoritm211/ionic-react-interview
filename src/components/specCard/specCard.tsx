@@ -1,11 +1,10 @@
-import {IonCard, IonCardHeader, IonCardSubtitle, IonCardTitle, IonIcon} from '@ionic/react';
-import React from 'react';
-import {star, thumbsDown} from 'ionicons/icons';
+import { IonCard, IonCardHeader, IonCardSubtitle, IonCardTitle, IonIcon } from '@ionic/react'
+import React from 'react'
+import { star, thumbsDown } from 'ionicons/icons'
 import './specCard.css'
-import {SpecType} from "../../types/specialists";
-import SpecDB from '../../firebase/specialists/specDB'
-import {useDispatch} from "react-redux";
-import {updateSpec} from "../../store/specialists/thunks";
+import { SpecType } from '../../types/specialists'
+import { useDispatch } from 'react-redux'
+import { updateSpec } from '../../store/specialists/thunks'
 
 type PropsType = {
   specialist: SpecType
@@ -13,7 +12,7 @@ type PropsType = {
 
 const SpecCard: React.FC<PropsType> = (props) => {
   const dispatch = useDispatch()
-  const {name, email, type, isLiked} = props.specialist
+  const { name, email, type, isLiked } = props.specialist
   const onRatingUpdate = () => {
     if (!isLiked) {
       dispatch(updateSpec(props.specialist, true))
@@ -31,32 +30,32 @@ const SpecCard: React.FC<PropsType> = (props) => {
           <div className={'contact'}>Email: {email}</div>
         </div>
         <div className={'rating'}>
-          {/*field isLiked may be undefined*/}
+          {/* field isLiked may be undefined*/}
           {!isLiked ? (
             <>
               {isLiked === undefined ? (
                 <IonIcon
                   onClick={onRatingUpdate}
                   icon={star}
-                  style={{fontSize: '30px'}}/>
+                  style={{ fontSize: '30px' }}/>
               ) : (
                 <IonIcon
                   onClick={onRatingUpdate}
                   icon={thumbsDown}
-                  style={{fontSize: '30px'}}/>
+                  style={{ fontSize: '30px' }}/>
               )}
             </>
           ) : (
             <IonIcon
               onClick={onRatingUpdate}
               icon={star}
-              style={{fontSize: '30px', color: '#c6c662'}}/>
+              style={{ fontSize: '30px', color: '#c6c662' }}/>
           )}
           {isLiked === undefined && 'Без оценки'}
         </div>
       </IonCardHeader>
     </IonCard>
-  );
-};
+  )
+}
 
-export default SpecCard;
+export default SpecCard

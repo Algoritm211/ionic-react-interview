@@ -1,9 +1,9 @@
-import React, {useEffect} from 'react';
-import {IonContent, IonHeader, IonPage, IonTitle, IonToolbar} from "@ionic/react";
-import SpecCard from "../../components/specCard/specCard";
-import {useDispatch, useSelector} from "react-redux";
-import {getAllSpecs} from "../../store/specialists/selectors";
-import {loadAllSpecs} from "../../store/specialists/thunks";
+import React, { useEffect } from 'react'
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react'
+import SpecCard from '../../components/specCard/specCard'
+import { useDispatch, useSelector } from 'react-redux'
+import { getAllSpecs } from '../../store/specialists/selectors'
+import { loadAllSpecs } from '../../store/specialists/thunks'
 
 const MainListTab: React.FC = () => {
   const dispatch = useDispatch()
@@ -29,7 +29,7 @@ const MainListTab: React.FC = () => {
         {specsBlock}
       </IonContent>
     </IonPage>
-  );
-};
+  )
+}
 
-export default MainListTab;
+export default MainListTab

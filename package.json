@@ -20,6 +20,7 @@
     "@types/react-dom": "^16.9.10",
     "@types/react-router": "^5.1.11",
     "@types/react-router-dom": "^5.1.7",
+    "editorconfig-checker": "^4.0.2",
     "firebase": "^8.6.7",
     "formik": "^2.2.9",
     "ionicons": "^5.4.0",
@@ -47,6 +48,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "editorconfig": "editorconfig-checker",
+    "lint:eslint": "eslint --ext .tsx,.ts src/",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -70,7 +73,12 @@
     ]
   },
   "devDependencies": {
-    "@capacitor/cli": "3.0.1"
+    "@capacitor/cli": "3.0.1",
+    "@typescript-eslint/eslint-plugin": "^4.26.1",
+    "@typescript-eslint/parser": "^4.26.1",
+    "eslint": "^7.28.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-react": "^7.24.0"
   },
   "description": "An Ionic project"
 }

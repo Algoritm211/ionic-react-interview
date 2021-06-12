@@ -1,5 +1,5 @@
-import React from 'react';
-import {IonContent, IonHeader, IonPage, IonTitle, IonToolbar} from "@ionic/react";
+import React from 'react'
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react'
 
 const DisfavouriteTab = () => {
   return (
@@ -13,7 +13,7 @@ const DisfavouriteTab = () => {
         <IonTitle size="large">Disfavourite</IonTitle>
       </IonContent>
     </IonPage>
-  );
-};
+  )
+}
 
-export default DisfavouriteTab;
+export default DisfavouriteTab

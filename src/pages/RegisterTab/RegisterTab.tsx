@@ -8,11 +8,11 @@ import {
   IonPage, IonSelect, IonSelectOption,
   IonTitle,
   IonToolbar,
-  useIonAlert
-} from '@ionic/react';
-import React from 'react';
-import {useFormik} from "formik";
-import * as Yup from 'yup';
+  useIonAlert,
+} from '@ionic/react'
+import React from 'react'
+import { useFormik } from 'formik'
+import * as Yup from 'yup'
 import './RegisterTab.css'
 import SpecDB from '../../firebase/specialists/specDB'
 
@@ -24,11 +24,11 @@ const registerValidationSchema = Yup.object({
     .required('Поле не должно быть пустым')
     .max(150, 'Имя не должно быть таким длинным'),
   type: Yup.string()
-    .required('Обязательно выберите категорию')
+    .required('Обязательно выберите категорию'),
 })
 
 const RegisterTab: React.FC = () => {
-  const [created] = useIonAlert();
+  const [created] = useIonAlert()
   const formik = useFormik({
     initialValues: {
       email: '',
@@ -38,13 +38,13 @@ const RegisterTab: React.FC = () => {
     validationSchema: registerValidationSchema,
     onSubmit: async (values) => {
       try {
-        await SpecDB.create({...values})
+        await SpecDB.create({ ...values })
         created(configAlert('Поздравляем', 'Вы зарегистрированы на платформе!'))
         formik.resetForm()
       } catch (error) {
         created(configAlert('Ошибка', 'Попробуйте еще раз'))
       }
-    }
+    },
   })
 
   function configAlert(alertHeader: string, alertMessage: string) {
@@ -87,9 +87,9 @@ const RegisterTab: React.FC = () => {
               value={formik.values.name}
             />
           </IonItem>
-            <p className={'error'}>
-              {formik.touched.name && formik.errors.name}
-            </p>
+          <p className={'error'}>
+            {formik.touched.name && formik.errors.name}
+          </p>
           <IonItem>
             <IonLabel position="floating">Выберите категорию</IonLabel>
             <IonSelect
@@ -101,9 +101,9 @@ const RegisterTab: React.FC = () => {
               <IonSelectOption value={'психиатр'}>Психиатр</IonSelectOption>
             </IonSelect>
           </IonItem>
-            <p className={'error'}>
-              {formik.touched.type && formik.errors.type}
-            </p>
+          <p className={'error'}>
+            {formik.touched.type && formik.errors.type}
+          </p>
           <IonButton
             className="ion-margin-top"
             type="submit"
@@ -113,7 +113,7 @@ const RegisterTab: React.FC = () => {
         </form>
       </IonContent>
     </IonPage>
-  );
-};
+  )
+}
 
-export default RegisterTab;
+export default RegisterTab

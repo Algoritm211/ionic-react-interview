@@ -1,4 +1,4 @@
-import {RootState} from "../store";
+import { RootState } from '../store'
 
 export const getAllSpecs = (state: RootState) => {
   return state.specReducer.allSpecs
