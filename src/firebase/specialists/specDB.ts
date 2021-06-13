@@ -8,8 +8,14 @@ class SpecDB {
     await db.collection('psycologists').add(specObj)
   }
 
-  getAll = async () => {
-    const rawData = await db.collection('psycologists').get()
+  // favFilter means all specs, only favourite, only disFavorite
+  getAll = async (filters: Array<string>, isLiked?: boolean) => {
+    const collection = db.collection('psycologists')
+    let query = collection.where('type', 'in', filters)
+    if (isLiked !== undefined) {
+      query = query.where('isLiked', '==', isLiked)
+    }
+    const rawData = await query.get()
     const data = rawData.docs.map((doc) => {
       return { ...doc.data(), id: doc.id }
     })

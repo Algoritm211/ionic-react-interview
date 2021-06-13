@@ -96,9 +96,9 @@ const RegisterTab: React.FC = () => {
               name={'type'}
               onIonChange={formik.handleChange}
               value={formik.values.type}>
-              <IonSelectOption value={'психолог'}>Психолог</IonSelectOption>
-              <IonSelectOption value={'психотерапевт'}>Психотерапевт</IonSelectOption>
-              <IonSelectOption value={'психиатр'}>Психиатр</IonSelectOption>
+              <IonSelectOption value={'Психолог'}>Психолог</IonSelectOption>
+              <IonSelectOption value={'Психотерапевт'}>Психотерапевт</IonSelectOption>
+              <IonSelectOption value={'Психиатр'}>Психиатр</IonSelectOption>
             </IonSelect>
           </IonItem>
           <p className={'error'}>

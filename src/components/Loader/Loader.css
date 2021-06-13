@@ -1,0 +1,10 @@
+
+.custom-loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 200px;
+  height: 200px;
+  margin: auto;
+}

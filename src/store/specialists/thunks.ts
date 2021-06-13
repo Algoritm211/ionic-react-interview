@@ -3,10 +3,13 @@ import { setAllSpecs, specUpdate, toggleIsLoading } from './reducer'
 import SpecDB from '../../firebase/specialists/specDB'
 import { SpecType } from '../../types/specialists'
 
-
-export const loadAllSpecs = () => async (dispatch: AppDispatch) => {
+const allFiltersOnPage = ['Психиатр', 'Психолог', 'Психотерапевт']
+export const loadAllSpecs = (filters: Array<string>, isLiked?: boolean) => async (dispatch: AppDispatch) => {
   dispatch(toggleIsLoading(true))
-  const data = await SpecDB.getAll()
+  if (filters[0] === 'all') {
+    filters = allFiltersOnPage
+  }
+  const data = await SpecDB.getAll(filters, isLiked)
   dispatch(setAllSpecs(data))
   dispatch(toggleIsLoading(false))
 }
