@@ -16,3 +16,13 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ### Also you can check ready app on Firebase hosting:
 [https://psycologists-app.web.app/main](https://psycologists-app.web.app/main)
+
+### You can see some screenshots of app below:
+
+<p align="center">
+  <img src="https://drive.google.com/uc?export=view&id=1jMgmcZ263o6geyfYfUXs-XcWT9yIfKhe" width=400 height=700>
+  <img src="https://drive.google.com/uc?export=view&id=1jGhVfYdxMH23sV5fm0YkHe3Hxdnhwggh" width=400 height=700>
+  <br>
+  <img src="https://drive.google.com/uc?export=view&id=1jKDi6vQX2NQgHdF1dBMvgcbOwW7PGjAn" width=400 height=700>
+  <img src="https://drive.google.com/uc?export=view&id=1jGDPCIpQEfFHGZcuIn7gSPrBKSQZdA4A" width=400 height=700>
+</p>
