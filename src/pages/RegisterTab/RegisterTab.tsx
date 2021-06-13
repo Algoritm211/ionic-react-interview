@@ -109,7 +109,7 @@ const RegisterTab: React.FC = () => {
               className="ion-margin-top"
               type="submit"
               expand="block">
-              Login
+              Добавить специалиста
             </IonButton>
           </form>
         </div>
