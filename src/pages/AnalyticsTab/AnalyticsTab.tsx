@@ -6,7 +6,7 @@ const AnalyticsTab = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Analytics</IonTitle>
+          <IonTitle>Статистика по специалистам</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
