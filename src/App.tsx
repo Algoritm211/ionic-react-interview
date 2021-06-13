@@ -42,43 +42,43 @@ const App: React.FC = () => (
       <IonTabs>
         <IonRouterOutlet>
           <Route exact path="/registration">
-            <RegisterTab />
+            <RegisterTab/>
           </Route>
           <Route exact path="/main">
-            <MainListTab />
+            <MainListTab/>
           </Route>
           <Route path="/favorite">
-            <FavouriteTab />
+            <FavouriteTab/>
           </Route>
           <Route path="/disfavorite">
-            <DisfavouriteTab />
+            <DisfavouriteTab/>
           </Route>
           <Route path="/analytics">
-            <AnalyticsTab />
+            <AnalyticsTab/>
           </Route>
           <Route exact path="/">
-            <Redirect to="/main" />
+            <Redirect to="/main"/>
           </Route>
         </IonRouterOutlet>
-        <IonTabBar slot="bottom">
+        <IonTabBar slot="bottom" style={{ height: '60px' }}>
           <IonTabButton tab={'registration'} href="/registration">
-            <IonIcon icon={person} />
+            <IonIcon icon={person}/>
             <IonLabel>Добавить</IonLabel>
           </IonTabButton>
           <IonTabButton tab={'main'} href="/main">
-            <IonIcon icon={people} />
+            <IonIcon icon={people}/>
             <IonLabel>Все</IonLabel>
           </IonTabButton>
           <IonTabButton tab={'favorite'} href="/favorite">
-            <IonIcon icon={star} />
-            <IonLabel>Любимые психологи</IonLabel>
+            <IonIcon icon={star}/>
+            <IonLabel>Любимые <br/> психологи</IonLabel>
           </IonTabButton>
           <IonTabButton tab={'disfavorite'} href="/disfavorite">
-            <IonIcon icon={thumbsDown} />
-            <IonLabel>Нелюбимые психологи</IonLabel>
+            <IonIcon icon={thumbsDown}/>
+            <IonLabel>Нелюбимые <br/>  психологи</IonLabel>
           </IonTabButton>
           <IonTabButton tab={'analytics'} href="/analytics">
-            <IonIcon icon={analytics} />
+            <IonIcon icon={analytics}/>
             <IonLabel>Аналитика</IonLabel>
           </IonTabButton>
         </IonTabBar>
