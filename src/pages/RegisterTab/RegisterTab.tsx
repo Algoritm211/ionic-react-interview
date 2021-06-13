@@ -66,51 +66,53 @@ const RegisterTab: React.FC = () => {
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
-        <form className="ion-padding" onSubmit={formik.handleSubmit}>
-          <IonItem>
-            <IonLabel position="floating">Введите email</IonLabel>
-            <IonInput
-              id={'email'}
-              name={'email'}
-              onIonChange={formik.handleChange}
-              value={formik.values.email}/>
-          </IonItem>
-          <p className={'error'}>
-            {formik.touched.email && formik.errors.email}
-          </p>
-          <IonItem>
-            <IonLabel position="floating">Введите имя</IonLabel>
-            <IonInput
-              id={'name'}
-              name={'name'}
-              onIonChange={formik.handleChange}
-              value={formik.values.name}
-            />
-          </IonItem>
-          <p className={'error'}>
-            {formik.touched.name && formik.errors.name}
-          </p>
-          <IonItem>
-            <IonLabel position="floating">Выберите категорию</IonLabel>
-            <IonSelect
-              name={'type'}
-              onIonChange={formik.handleChange}
-              value={formik.values.type}>
-              <IonSelectOption value={'Психолог'}>Психолог</IonSelectOption>
-              <IonSelectOption value={'Психотерапевт'}>Психотерапевт</IonSelectOption>
-              <IonSelectOption value={'Психиатр'}>Психиатр</IonSelectOption>
-            </IonSelect>
-          </IonItem>
-          <p className={'error'}>
-            {formik.touched.type && formik.errors.type}
-          </p>
-          <IonButton
-            className="ion-margin-top"
-            type="submit"
-            expand="block">
-            Login
-          </IonButton>
-        </form>
+        <div className={'register-block'}>
+          <form className="ion-padding register-form" onSubmit={formik.handleSubmit}>
+            <IonItem>
+              <IonLabel position="floating">Введите email</IonLabel>
+              <IonInput
+                id={'email'}
+                name={'email'}
+                onIonChange={formik.handleChange}
+                value={formik.values.email}/>
+            </IonItem>
+            <p className={'error'}>
+              {formik.touched.email && formik.errors.email}
+            </p>
+            <IonItem>
+              <IonLabel position="floating">Введите имя</IonLabel>
+              <IonInput
+                id={'name'}
+                name={'name'}
+                onIonChange={formik.handleChange}
+                value={formik.values.name}
+              />
+            </IonItem>
+            <p className={'error'}>
+              {formik.touched.name && formik.errors.name}
+            </p>
+            <IonItem>
+              <IonLabel position="floating">Выберите категорию</IonLabel>
+              <IonSelect
+                name={'type'}
+                onIonChange={formik.handleChange}
+                value={formik.values.type}>
+                <IonSelectOption value={'Психолог'}>Психолог</IonSelectOption>
+                <IonSelectOption value={'Психотерапевт'}>Психотерапевт</IonSelectOption>
+                <IonSelectOption value={'Психиатр'}>Психиатр</IonSelectOption>
+              </IonSelect>
+            </IonItem>
+            <p className={'error'}>
+              {formik.touched.type && formik.errors.type}
+            </p>
+            <IonButton
+              className="ion-margin-top"
+              type="submit"
+              expand="block">
+              Login
+            </IonButton>
+          </form>
+        </div>
       </IonContent>
     </IonPage>
   )

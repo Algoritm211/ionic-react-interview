@@ -18,7 +18,7 @@ const AnalyticsTable: React.FC<PropsType> = ({ tableTitle, specList }) => {
   return (
     <div style={{ marginBottom: '20px' }}>
       <IonText className={'ion-padding'} style={{ fontStyle: 'italic', fontSize: '20px' }}>
-        1. {tableTitle} - {specList.length} человек:
+        {tableTitle} - {specList.length} человек:
       </IonText>
       <IonList>
         {specBlock}
