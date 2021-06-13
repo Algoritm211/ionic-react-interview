@@ -23,7 +23,6 @@ const SpecList: React.FC<PropsType> = ({ isLiked }) => {
   useEffect(() => {
     dispatch(loadAllSpecs(filter, isLiked))
   }, [filter])
-  console.log(isLiked)
   const specsBlock = specs.map((specialist) => {
     // return all if no isLiked - it`s Main page
     if (isLiked === undefined) {

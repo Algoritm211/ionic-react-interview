@@ -63,23 +63,23 @@ const App: React.FC = () => (
         <IonTabBar slot="bottom">
           <IonTabButton tab={'registration'} href="/registration">
             <IonIcon icon={person} />
-            <IonLabel>Registration</IonLabel>
+            <IonLabel>Добавить</IonLabel>
           </IonTabButton>
           <IonTabButton tab={'main'} href="/main">
             <IonIcon icon={people} />
-            <IonLabel>All specialists</IonLabel>
+            <IonLabel>Все</IonLabel>
           </IonTabButton>
           <IonTabButton tab={'favorite'} href="/favorite">
             <IonIcon icon={star} />
-            <IonLabel>Favorite</IonLabel>
+            <IonLabel>Любимые психологи</IonLabel>
           </IonTabButton>
           <IonTabButton tab={'disfavorite'} href="/disfavorite">
             <IonIcon icon={thumbsDown} />
-            <IonLabel>Disfavorite</IonLabel>
+            <IonLabel>Нелюбимые психологи</IonLabel>
           </IonTabButton>
           <IonTabButton tab={'analytics'} href="/analytics">
             <IonIcon icon={analytics} />
-            <IonLabel>Analytics</IonLabel>
+            <IonLabel>Аналитика</IonLabel>
           </IonTabButton>
         </IonTabBar>
       </IonTabs>

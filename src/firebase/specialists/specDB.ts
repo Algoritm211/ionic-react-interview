@@ -1,8 +1,16 @@
 import firebase from '../firebaseConfig'
 import { SpecType } from '../../types/specialists'
+
+type QuerySnapshot = firebase.firestore.QuerySnapshot
 const db = firebase.firestore()
 
 class SpecDB {
+  private dataParser = (rawData: QuerySnapshot) => {
+    return rawData.docs.map((doc) => {
+      return { ...doc.data(), id: doc.id }
+    })
+  }
+
   // specObj must have the same fields as specialist type
   create = async (specObj: SpecType) => {
     await db.collection('psycologists').add(specObj)
@@ -16,15 +24,11 @@ class SpecDB {
       query = query.where('isLiked', '==', isLiked)
     }
     const rawData = await query.get()
-    const data = rawData.docs.map((doc) => {
-      return { ...doc.data(), id: doc.id }
-    })
-    return data
+    return this.dataParser(rawData)
   }
 
   update = async (id: string, specObj: SpecType) => {
-    const rawData = await db.collection('psycologists').doc(id).set(specObj)
-    console.log(rawData)
+    await db.collection('psycologists').doc(id).set(specObj)
   }
 }
 
