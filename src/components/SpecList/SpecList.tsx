@@ -35,7 +35,7 @@ const SpecList: React.FC<PropsType> = ({ isLiked }) => {
         <>
           <IonTitle size="large" className={'ion-padding'}>Результаты:</IonTitle>
           <IonItem className={'ion-margin'}>
-            <IonLabel position="floating">Выберите специалиста</IonLabel>
+            <IonLabel position="floating">Найденные специалисты</IonLabel>
             <IonSelect
               onIonChange={(event) => setFilter([event.detail.value])}
               value={filter[0]}

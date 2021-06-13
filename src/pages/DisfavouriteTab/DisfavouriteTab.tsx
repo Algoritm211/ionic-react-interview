@@ -1,16 +1,17 @@
 import React from 'react'
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react'
+import SpecList from '../../components/SpecList/SpecList'
 
 const DisfavouriteTab = () => {
   return (
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Disfavourite</IonTitle>
+          <IonTitle>Нелюбимые специалисты</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
-        <IonTitle size="large">Disfavourite</IonTitle>
+        <SpecList isLiked={false}/>
       </IonContent>
     </IonPage>
   )
