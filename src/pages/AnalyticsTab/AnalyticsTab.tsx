@@ -16,17 +16,17 @@ const AnalyticsTab = () => {
     dispatch(loadAllSpecs(['all']))
   }, [])
   const allSpecTablesBlock = []
-  // sorting by type, then divide by blocks
+  // sorting by type, then divide by groups
+  // then creating a table for all groups
   const sortedSpecsByType = groupByKey(specs, 'type')
   for (const key in sortedSpecsByType) {
     if (sortedSpecsByType.hasOwnProperty(key)) {
-      // @ts-ignore because group by key
+      // @ts-ignore because group by key, function is universal
       const specTypesTable = <AnalyticsTable tableTitle={key} specList={sortedSpecsByType[key]} key={key}/>
       allSpecTablesBlock.push(specTypesTable)
     }
   }
   const sortedSpecsByIsLiked = groupByKey(specs, 'isLiked')
-  // console.log(sortedByIsLiked)
   return (
     <IonPage>
       <IonHeader>
