@@ -15,7 +15,6 @@
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.6.3",
     "@types/jest": "^26.0.20",
-    "@types/node": "^12.19.15",
     "@types/react": "^16.14.3",
     "@types/react-dom": "^16.9.10",
     "@types/react-router": "^5.1.11",
@@ -50,6 +49,7 @@
     "start": "react-scripts start",
     "editorconfig": "editorconfig-checker",
     "lint:eslint": "eslint --ext .tsx,.ts src/",
+    "cypress:test": "node_modules/.bin/cypress open",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -74,8 +74,10 @@
   },
   "devDependencies": {
     "@capacitor/cli": "3.0.1",
+    "@types/node": "^12.20.15",
     "@typescript-eslint/eslint-plugin": "^4.26.1",
     "@typescript-eslint/parser": "^4.26.1",
+    "cypress": "^7.5.0",
     "eslint": "^7.28.0",
     "eslint-config-google": "^0.14.0",
     "eslint-plugin-react": "^7.24.0"

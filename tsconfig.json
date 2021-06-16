@@ -1,6 +1,9 @@
 {
   "compilerOptions": {
     "target": "es5",
+    "types": [
+      "cypress"
+    ],
     "lib": [
       "dom",
       "dom.iterable",
@@ -21,6 +24,7 @@
     "jsx": "react-jsx"
   },
   "include": [
-    "src"
+    "src",
+    "node_modules/@types/node/globals.d.ts"
   ]
 }

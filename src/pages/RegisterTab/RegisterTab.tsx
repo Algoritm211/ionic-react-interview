@@ -91,7 +91,7 @@ const RegisterTab: React.FC = () => {
             <p className={'error'}>
               {formik.touched.name && formik.errors.name}
             </p>
-            <IonItem>
+            <IonItem cy-data={'category'}>
               <IonLabel position="floating">Выберите категорию</IonLabel>
               <IonSelect
                 name={'type'}
@@ -106,6 +106,7 @@ const RegisterTab: React.FC = () => {
               {formik.touched.type && formik.errors.type}
             </p>
             <IonButton
+              disabled={!formik.isValid}
               className="ion-margin-top"
               type="submit"
               expand="block">
