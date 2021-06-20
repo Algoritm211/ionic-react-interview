@@ -1,10 +1,10 @@
-import { CapacitorConfig } from '@capacitor/cli';
+import { CapacitorConfig } from '@capacitor/cli'
 
 const config: CapacitorConfig = {
-  appId: 'io.ionic.starter',
+  appId: 'com.alexreactionic.com',
   appName: 'psychologists-app',
   webDir: 'build',
-  bundledWebRuntime: false
-};
+  bundledWebRuntime: true,
+}
 
-export default config;
+export default config
