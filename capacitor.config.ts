@@ -1,10 +1,10 @@
 import { CapacitorConfig } from '@capacitor/cli'
 
 const config: CapacitorConfig = {
-  appId: 'com.alexreactionic.com',
+  appId: 'com.reactionicalex.com',
   appName: 'psychologists-app',
   webDir: 'build',
-  bundledWebRuntime: true,
+  bundledWebRuntime: false,
 }
 
 export default config

@@ -1,5 +1,17 @@
 {
   "projects": {
     "default": "psycologists-app"
+  },
+  "targets": {
+    "psycologists-app": {
+      "hosting": {
+        "ru": [
+          "psycologists-app"
+        ],
+        "en": [
+          "es-psycologists-app"
+        ]
+      }
+    }
   }
 }
