@@ -52,7 +52,6 @@ const SpecCard: React.FC<PropsType> = (props) => {
               style={{ fontSize: '30px', color: '#c6c662' }}/>
           )}
           {isLiked === undefined && 'Без оценки'}
-          Another text for testing
         </div>
       </IonCardHeader>
     </IonCard>
