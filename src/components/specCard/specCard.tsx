@@ -25,6 +25,7 @@ const SpecCard: React.FC<PropsType> = (props) => {
     <IonCard>
       <IonCardHeader className={'card'}>
         <div>
+          Some text for test
           <IonCardSubtitle>{type}</IonCardSubtitle>
           <IonCardTitle>{name}</IonCardTitle>
           <div className={'contact'}>Email: {email}</div>
