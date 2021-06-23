@@ -25,7 +25,6 @@ const SpecCard: React.FC<PropsType> = (props) => {
     <IonCard>
       <IonCardHeader className={'card'}>
         <div>
-          Some text for test
           <IonCardSubtitle>{type}</IonCardSubtitle>
           <IonCardTitle>{name}</IonCardTitle>
           <div className={'contact'}>Email: {email}</div>
@@ -53,6 +52,7 @@ const SpecCard: React.FC<PropsType> = (props) => {
               style={{ fontSize: '30px', color: '#c6c662' }}/>
           )}
           {isLiked === undefined && 'Без оценки'}
+          Another text for testing
         </div>
       </IonCardHeader>
     </IonCard>
