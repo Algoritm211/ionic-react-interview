@@ -61,6 +61,7 @@ const RegistrationForm = () => {
           <IonInput
             id={'email'}
             name={'email'}
+            onIonBlur={formik.handleBlur}
             onIonChange={formik.handleChange}
             value={formik.values.email} />
         </IonItem>
@@ -72,6 +73,7 @@ const RegistrationForm = () => {
           <IonInput
             id={'name'}
             name={'name'}
+            onIonBlur={formik.handleBlur}
             onIonChange={formik.handleChange}
             value={formik.values.name}
           />
@@ -83,6 +85,7 @@ const RegistrationForm = () => {
           <IonLabel position="floating">Выберите категорию</IonLabel>
           <IonSelect
             name={'type'}
+            onIonBlur={formik.handleBlur}
             onIonChange={formik.handleChange}
             value={formik.values.type}>
             <IonSelectOption value={'Психолог'}>Психолог</IonSelectOption>
@@ -98,7 +101,7 @@ const RegistrationForm = () => {
           className="ion-margin-top"
           type="submit"
           expand="block">
-          Добавить специалиста
+          {!formik.isValid ? 'Заполните все поля' : 'Добавить специалиста'}
         </IonButton>
       </form>
     </div>
