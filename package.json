@@ -3,7 +3,6 @@
   "version": "0.0.1",
   "private": true,
   "dependencies": {
-    "@capacitor-community/electron": "^3.0.1",
     "@capacitor/android": "^3.0.1",
     "@capacitor/app": "1.0.1",
     "@capacitor/core": "^3.0.1",
@@ -24,7 +23,6 @@
     "cordova-plugin-ionic": "5.4.7",
     "cordova-plugin-whitelist": "^1.3.4",
     "editorconfig-checker": "^4.0.2",
-    "electron-builder": "^22.11.7",
     "firebase": "^8.6.7",
     "formik": "^2.2.9",
     "ionicons": "^5.4.0",
@@ -61,11 +59,7 @@
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
-    "chromatic": "chromatic --exit-zero-on-changes",
-    "android": "npx cap add android",
-    "electron": "npx cap add @capacitor-community/electron",
-    "run-android": "npx cap run android",
-    "run-electron": "npx cap open @capacitor-community/electron"
+    "chromatic": "chromatic --exit-zero-on-changes"
   },
   "eslintConfig": {
     "extends": [

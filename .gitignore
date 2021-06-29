@@ -5,8 +5,7 @@
 /.pnp
 .pnp.js
 /android
-/electron
-/build-storybook.log
+build-storybook.log
 
 # testing
 /coverage
