@@ -50,13 +50,11 @@ describe('Advanced options on desktop', () => {
     cy.url().should('include', '/dashboard')
   })
 
-  before(() => {
+
+  it('Should have user menu', () => {
     cy.then(() => {
       window.localStorage.setItem('__auth__token', Cypress.env('token'))
     })
-  })
-
-  it.only('Should have user menu', () => {
     cy.visit('https://codedamn.com')
     cy.get('[id=user-menu]').click()
 
