@@ -14,9 +14,9 @@ jobs:
     runs-on: ubuntu-18.04
     container: cypress/browsers:node12.18.0-chrome83-ff77
     steps:
-      - name: Install Cypress, verify Cypress
-
       - uses: actions/checkout@v2
+      
+      - name: Install Cypress, verify Cypress
       - run: npm install
       - run: $(npm bin)/cypress verify
 
