@@ -20,6 +20,9 @@ jobs:
         run: |
           npm install
           $(npm bin)/cypress verify
+        
+      - name: Run React App
+        run: npm run start
 
       - name: Run Cypress tests
         run: npm run cypress:test:chrome
