@@ -1,9 +1,15 @@
 This app was built using [Ionic Framework](https://ionicframework.com/docs) and [React](https://reactjs.org/)
-<p align="center">
-  <img src="https://github.com/Algoritm211/ionic-react-interview/actions/workflows/editorconfig.yml/badge.svg">
-  <img src="https://github.com/Algoritm211/ionic-react-interview/actions/workflows/eslint.yml/badge.svg">
-  <img src="https://img.shields.io/badge/license-MIT-blue.svg">
-</p>
+<div style="display: flex; flex-direction: row; flex-wrap: wrap;">
+  <div>
+      <img src="https://github.com/Algoritm211/ionic-react-interview/actions/workflows/editorconfig.yml/badge.svg">
+      <img src="https://github.com/Algoritm211/ionic-react-interview/actions/workflows/cypress-test-report.yml/badge.svg">
+  </div>
+  <div>
+      <img src="https://github.com/Algoritm211/ionic-react-interview/actions/workflows/eslint.yml/badge.svg">
+      <img src="https://github.com/Algoritm211/ionic-react-interview/actions/workflows/chromatic.yml/badge.svg">
+      <img src="https://img.shields.io/badge/license-MIT-blue.svg">
+  </div>
+</div>
 
 # Run app on your machine
 
@@ -16,6 +22,9 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ### Also you can check ready app on Firebase hosting:
 [https://psycologists-app.web.app/main](https://psycologists-app.web.app/main)
+
+### Here you can see results of Cypress test check:
+[https://algoritm211.github.io/ionic-react-interview/](https://algoritm211.github.io/ionic-react-interview/)
 
 ### You can see some screenshots of app below:
 
