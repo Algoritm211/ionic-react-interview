@@ -17,8 +17,9 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Install Cypress, verify Cypress
-        run: npm install
-        run: $(npm bin)/cypress verify
+        run: |
+          npm install
+          $(npm bin)/cypress verify
 
       - name: Run Cypress tests
         run: npm run cypress:test:chrome
