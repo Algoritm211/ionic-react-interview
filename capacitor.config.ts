@@ -5,6 +5,9 @@ const config: CapacitorConfig = {
   appName: 'psychologists-app',
   webDir: 'build',
   bundledWebRuntime: false,
+  ios: {
+    scheme: 'My App',
+  },
 }
 
 export default config

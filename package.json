@@ -8,6 +8,7 @@
     "@capacitor/app": "1.0.1",
     "@capacitor/core": "^3.0.1",
     "@capacitor/haptics": "1.0.1",
+    "@capacitor/ios": "^3.0.2",
     "@capacitor/keyboard": "1.0.1",
     "@capacitor/status-bar": "1.0.1",
     "@ionic/react": "^5.5.0",
@@ -69,8 +70,10 @@
     "build-storybook": "build-storybook -s public",
     "chromatic": "chromatic --exit-zero-on-changes",
     "android": "npx cap add android",
-    "electron": "npx cap add @capacitor-community/electron",
     "run-android": "npx cap run android",
+    "ios": "npx cap add ios",
+    "run-ios": "npx cap open ios",
+    "electron": "npx cap add @capacitor-community/electron",
     "run-electron": "npx cap open @capacitor-community/electron"
   },
   "eslintConfig": {
