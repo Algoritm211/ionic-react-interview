@@ -20,9 +20,10 @@ jobs:
         run: |
           npm install
           $(npm bin)/cypress verify
-        
-      - name: Run React App
-        run: npm run start
+
+      - name: Run React app
+        run: |
+          npm start & npx wait-on http://localhost:3000
 
       - name: Run Cypress tests
         run: npm run cypress:test:chrome
