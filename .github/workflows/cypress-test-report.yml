@@ -1,6 +1,6 @@
 
 
-name: Cypress tests and generating report
+name: Cypress tests/generating report (GitHub pages)
 
 on: 
   push: 
