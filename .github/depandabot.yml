@@ -6,7 +6,6 @@ updates:
       interval: "daily"
     target-branch: "FB-001"
     labels:
-      - "npm"
       - "dependencies"  
     reviewers:
       - "Algoritm211"
