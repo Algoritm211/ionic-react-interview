@@ -7,7 +7,7 @@ const DisfavouriteTab = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Нелюбимые специалисты</IonTitle>
+          <IonTitle>Нелюбимые психологи</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>

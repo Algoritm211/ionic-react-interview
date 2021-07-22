@@ -1,0 +1,11 @@
+version: 2
+updates:
+  - package-ecosystem: "npm" 
+    directory: "/"
+    schedule:
+      interval: "daily"
+    target-branch: "FB-001"
+    labels:
+      - "dependencies"  
+    reviewers:
+      - "Algoritm211"
