@@ -6,7 +6,6 @@ This app was built using [Ionic Framework](https://ionicframework.com/docs) and 
   </div>
   <div>
       <img src="https://github.com/Algoritm211/ionic-react-interview/actions/workflows/eslint.yml/badge.svg">
-      <img src="https://github.com/Algoritm211/ionic-react-interview/actions/workflows/chromatic.yml/badge.svg">
       <img src="https://img.shields.io/badge/license-MIT-blue.svg">
   </div>
 </div>
